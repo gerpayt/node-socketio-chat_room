@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>在线聊天室</title>
+    <link href="/main.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="container">
+<div class="left-box box">
+<h4>消息列表</h4>
+<ul class="message-list" id="message-list">
+
+</ul>
+</div>
+<div class="right-box box">
+  <h4>在线用户</h4>
+<ul class="user-list" id="user-list">
+</ul>
+</div>
+<div class="bottom-box">
+  <div class="bottom-left">
+  <textarea class="message input" id="message"></textarea>
+  <button class="send input" id="send">发送</button>
+  </div>
+  <div class="bottom-right">
+  <input class="nickname" id="nickname" />
+  <button class="rename input" id="rename">改名</button>
+  <button class="exit input" id="exit">退出</button>
+  </div>
+</div>
+
+</div>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
