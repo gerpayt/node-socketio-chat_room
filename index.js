@@ -90,7 +90,7 @@ io.on('connection', function(socket){
             touser = msg.slice(1,msg.indexOf(':'));
             msg =  msg.slice(msg.indexOf(':')+1);
             console.log(nickname+' says to '+touser+': ' + msg);
-            var indexof = get_username_list().indexOf(touser);
+            var indexof = get_username_list().indexOf(encodeURI(touser));
             if ( indexof != -1){
                 try{
                     socket_list[indexof].emit('chat', nickname+'对'+touser+'说：' + msg);
