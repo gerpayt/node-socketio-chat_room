@@ -1,9 +1,15 @@
 {
   "name": "socket-chat-example",
   "version": "0.0.1",
+  "main": "index.html",
   "description": "my first socket.io app",
   "dependencies": {
     "express": "^4.3.2",
     "socket.io": "^1.0.2"
+  },
+  "window": {
+    "toolbar": false,
+    "width": 800,
+    "height": 500
   }
 }

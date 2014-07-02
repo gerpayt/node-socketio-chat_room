@@ -2,6 +2,7 @@ var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+var port = 9300;
 
 var userid_list = [];
 var socket_list = [];
@@ -19,8 +20,16 @@ app.get('/main.css', function(req, res){
     res.sendfile('main.css');
 });
 
-http.listen(9300, function(){
-    console.log('listening on *:9300');
+app.get('/socket.io.js', function(req, res){
+    res.sendfile('socket.io.js');
+});
+
+app.get('/jquery.js', function(req, res){
+    res.sendfile('jquery.js');
+});
+
+http.listen(port, function(){
+    console.log('listening on *:'+port);
 });
 
 

@@ -1,4 +1,4 @@
-var socket = io();
+var socket = io("http://127.0.0.1:9300");
 $('#nickname').val(getCookie('nickname'));
 $('#send').click(function(){
     var message = $('#message').val();
